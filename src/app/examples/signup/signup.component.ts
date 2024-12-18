@@ -55,7 +55,7 @@ export class SignupComponent implements OnInit {
           text: 'You have successfully signed up!',
           confirmButtonText: 'OK'
         }).then(() => {
-          this.router.navigate(['/verification']);  // Redirect to home page
+          this.router.navigate(['/signin']);  // Redirect to home page
         });
       }, error => {
         console.error('Signup failed', error);
