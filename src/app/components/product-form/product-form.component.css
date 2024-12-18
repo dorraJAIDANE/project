@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height */
+    padding: 20px;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 600px;        /* Adjust the max-width as needed */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  

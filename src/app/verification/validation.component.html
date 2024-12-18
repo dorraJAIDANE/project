@@ -1,0 +1,154 @@
+<main class="">
+  <section class="section section-xs section-shaped pb-50">
+    <div class="shape shape-style-1 shape-default"></div>
+    <div class="container py-lg-md d-flex">
+      <div class="col px-0">
+        <script href="https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons"></script>
+        <section class="mt--50 mb--50">
+          <div class="container marg">
+            <div class="row row-grid align-items-left">
+              <div class="col-md-6">
+                <div class="card shadow border-0 p-4">
+                  <div class="d-flex justify-content-center mb-3">
+                    <div class="icon-block">
+                      <img src="https://img.icons8.com/ios/50/2E9AFE/lock-2.png" alt="Lock Icon"/>
+                    </div>
+                  </div>
+                  <div class="text-center mb-3">
+                    <h2 class="fw-bold">Ooredoo Verification Terms</h2>
+                    <div class="text-muted">Enter the 6-digit code from your email verification</div>
+                  </div>
+                  <div class="ng-otp-input-container mb-3">
+                    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="configOptions"></ng-otp-input>
+                  </div>
+                  <div class="text-center mb-3">
+                    <button class="btn btn-primary btn-lg w-100" [ngClass]="btnStatus" (click)="onButtonClick()">{{ inputDigitLeft }}</button>
+                  </div>
+                  <p class="lead text-black text-center mb-3">Y a-t-il un problème ? Renvoyez un nouveau code à votre mail</p>
+                  <button class="btn bg-white text-black w-100" (click)="resend()">Renvoyer le code ?</button>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="pl-md-5">
+                  <h4 class="display-3 font-weight-bold text-black shadow-text">Bienvenue dans notre plateforme</h4>
+                  <p class="lead text-black shadow-text">Il vous manque une étape pour devenir l'un de nous!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Icon Block */
+.icon-block {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #d8eafad2;
+  margin-bottom: 20px;
+}
+.icon-block img {
+  height: auto;
+  margin: auto;
+}
+
+/* Container and Card */
+.container.marg {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 20px -3px #d5dbed;
+  padding: 2rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 6px 25px -3px #d5dbed;
+}
+
+/* Text Styles */
+.text-center {
+  text-align: center;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.text-muted {
+  color: #6c757d;
+}
+.text-black {
+  color: #000;
+}
+.shadow-text {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* OTP Input Container */
+.ng-otp-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 120px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+.btn-primary {
+  background-color: #2e9afe;
+  border-color: #2e9afe;
+}
+.btn-primary:hover {
+  background-color: #1c6eb9;
+  border-color: #1c6eb9;
+}
+.bg-white {
+  background-color: #fff;
+}
+.text-black {
+  color: #000;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+}
+.w-100 {
+  width: 100%;
+}
+
+/* Custom Styles */
+.bg {
+  background-color: rgb(213, 206, 224);
+}
+
+</style>

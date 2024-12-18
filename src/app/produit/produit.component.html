@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Ajouter un produit</h3>
+        </div>
+        <div class="card-body">
+          <form #produitForm="ngForm" (ngSubmit)="onSubmit(produitForm)">
+            
+            <div class="form-group">
+              <label for="centre">Sélectionner un Centre</label>
+              <select id="centre" [(ngModel)]="centreId" name="centreId" class="form-control" required>
+                <option value="">Sélectionnez un centre</option>
+                <option *ngFor="let centre of centres" [value]="centre.id">{{ centre.adresse }}</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Nom du produit</label>
+              <input id="name" name="name" ngModel class="form-control" required />
+            </div>
+          
+            <div class="form-group">
+              <label for="file">Sélectionner un fichier</label>
+              <input type="file" id="file" (change)="onFileSelected($event)" class="form-control" required />
+            </div>
+          
+            <button type="submit" class="btn btn-primary">Créer Produit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

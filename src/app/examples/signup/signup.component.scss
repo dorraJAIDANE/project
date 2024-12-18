@@ -1,0 +1,20 @@
+*.login-title {
+    color: white;
+}
+.error-message {
+    color: black; /* Couleur noire pour les messages d'erreur */
+    font-size: 0.750rem; /* Taille de police plus petite pour les messages d'erreur */
+    //margin-top: 0.25rem; /* Marge légère au-dessus du message d'erreur */
+}
+.moving-title {
+    animation: moveTitle 2s infinite;
+    color: #0c0909; /* Couleur bleue */
+    margin-top: 50px;
+    margin-bottom: 20px; 
+    text-align: center; /* Marge supérieure pour ajuster la position */
+  }
+  @keyframes moveTitle {
+    0% { transform: translateY(-20px); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(-20px); }
+  }

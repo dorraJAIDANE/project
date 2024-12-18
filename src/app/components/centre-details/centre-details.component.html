@@ -1,0 +1,46 @@
+<div class="wrapper">
+    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/ikr.png');">
+      <div class="filter"></div>
+    </div>
+    <div class="section profile-content">
+      <div class="container">
+        <div class="owner"></div>
+        <div class="row"></div>
+        <br/>
+        <div class="nav-tabs-navigation">
+          <div class="nav-tabs-wrapper">
+            <ngb-tabset [justify]="'center'">
+              <ngb-tab title="">
+                <ng-template ngbTabContent>
+                  <div class="row following" id="">
+                    <div class="col-md-6 ml-auto mr-auto">
+                      <ul class="list-unstyled follows">
+                        <li>
+                          <div *ngIf="centre">
+                            <h1>{{ centre.adresse }}</h1>
+                            <p>Additional details about the center...</p>
+                            <h2>Products</h2>
+                            <ul>
+                                <li *ngFor="let product of products">
+                                  <img [src]="'http://localhost:8082/images/' + product.photoUrl" alt="{{ product.name }}">
+                                  {{ product.name }}
+                                </li>
+                              </ul>
+                              
+                            <h2>Want to add a Product?</h2>
+                            <a routerLink="/add-product" class="btn btn-primary">Add Product</a>
+                          </div>
+                        </li>
+                        <hr/>
+                      </ul>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+<div class="container-centered">
+  <h2 class="produit-title">Our Products</h2>
+
+  <div *ngIf="produits.length > 0; else noProduits" class="produit-container">
+    <div *ngFor="let produit of produits" 
+         class="produit-card" 
+         [ngClass]="{'selected': produit.selected}" 
+         (click)="toggleProduitSelection(produit)">
+      <img [src]="getProductImageUrl(produit.photoUrl)" alt="{{ produit.name }}" class="produit-image" />
+      <h3>{{ produit.name }}</h3>
+      <h3>{{ produit.actif }}</h3>
+      <h3>{{ produit.PV_TTC }}</h3>
+    </div>
+  </div>
+
+  <!-- Button to create the KitPack -->
+  <button (click)="createKitPack()" class="kitpack-button">Create KitPack</button>
+
+  <ng-template #noProduits>
+    <p>No products available for this center.</p>
+  </ng-template>
+</div>

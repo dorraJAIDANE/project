@@ -1,0 +1,103 @@
+.btn-round {
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #e30613; /* Ooredoo Tunisia red color */
+    background-color: transparent; /* Set background to transparent */
+    border: 2px solid #e30613; /* Add a border in Ooredoo Tunisia red */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+button {
+    background-color: #e30613; /* Ooredoo red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+   /* bottom: 20px;*/
+  }
+.btn-round:hover {
+    background-color: #e30613; /* Change background color to Ooredoo Tunisia red on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+.btn-round:active {
+    background-color: white; /* Change background color to white when clicked or touched */
+    color: #e30613; /* Change text color to Ooredoo Tunisia red when clicked or touched */
+}
+/* Custom styles for the animated title */
+.animate-titlee {
+    font-weight: bold;
+    color: #000000; /* Ooredoo Tunisia red color */
+    animation: slide-in 2s ease-in-out infinite alternate;
+}
+
+/* Custom styles for the animated title */
+.animate-title {
+    font-weight: bold;
+    color: #e30613; /* Ooredoo Tunisia red color */
+    animation: slide-in 2s ease-in-out infinite alternate;
+}
+
+/* Keyframe animation for sliding effect */
+@keyframes slide-in {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control-lg {
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding */
+    font-size: 12px; /* Font size */
+    color: #000000; /* Text color */
+    border: 2px solid #5a5656; /* Border color */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+    appearance: none; /* Remove default styling */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Style the select dropdown on focus */
+.form-control-lg:focus {
+    border-color: #6b6565; /* Border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 4px 6px rgba(59, 56, 56, 0.2); /* Enhanced shadow on focus */
+}
+
+/* Style the options */
+option {
+    background-color: #fff; /* White background for options */
+    color: #857272; /* Dark text color for options */
+}
+
+/* Custom arrow icon for the select dropdown */
+.form-control-lg::-ms-expand {
+    display: none; /* Hide default arrow in Internet Explorer */
+}
+
+/* Add custom arrow icon for other browsers */
+.form-control-lg {
+    background: url('https://img.icons8.com/ios-filled/50/000000/chevron-down.png') no-repeat right center;
+    background-size: 24px;
+}

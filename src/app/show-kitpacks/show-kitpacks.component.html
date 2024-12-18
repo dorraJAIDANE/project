@@ -1,0 +1,21 @@
+<div class="container-centered">
+  <h2 class="kitpack-title">KitPacks</h2>
+
+  <div *ngIf="kitPacks.length > 0; else noKitPacks" class="kitpack-container">
+    <div *ngFor="let kitPack of kitPacks" class="kitpack-card">
+      <h3>{{ kitPack.kitCode }}</h3>
+      <ul>
+        <li *ngFor="let produit of kitPack.produits">
+          <h4>{{ produit.name }}</h4>
+          <p>Price (PV TTC): {{ produit.pvTtc }} TND</p>
+
+          <p>Actif: {{ produit.actif }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ng-template #noKitPacks>s
+    <p>No KitPacks available.</p>
+  </ng-template>
+</div>

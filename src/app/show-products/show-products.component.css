@@ -1,0 +1,148 @@
+/* Center the entire content */
+.container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    flex-direction: column;
+    text-align: center;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 20px;
+    
+  }
+
+  
+  /* Styling for the product container */
+  .produit-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap the cards to new rows if there are too many */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+  }
+  
+  /* Styling for the product card */
+  .produit-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #e60000; /* Ooredoo red for borders */
+    border-radius: 10px;
+    background-color: white;
+    width: 350px; /* Set a width for horizontal layout */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Makes the whole card clickable */
+
+  }
+  
+  .produit-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Ensure the image fits the left side of the card */
+  .produit-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  /* Style the button to match Ooredoo branding */
+  button {
+    background-color: #000000; /* Ooredoo red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 60px;
+   /* bottom: 20px;*/
+
+  }
+  
+  button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+  }
+  
+  /* Styling for "no products available" message */
+  p {
+    color: #e60000; /* Ooredoo red */
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+
+
+
+
+/* Styling for the title "Produits" */
+.produit-title {
+  color: #e60000; /* Ooredoo red */
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  animation: slideDown 1s ease-out; /* Animation for the title */
+}
+
+/* Slide down animation for the title */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Styling for the product card */
+
+
+
+
+/* Style the button to match Ooredoo branding */
+/*.kitpack-button {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+} */
+.produit-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.kitpack-button:hover {
+  background-color: #e60000;
+}
+
+/* Styling for "no products available" message */
+p {
+  color: #e60000;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Makes the label cover the entire card */
+}
+
+input[type="checkbox"] {
+  display: none; /* Hide the checkbox visually */
+}
+.produit-card.selected {
+  border: 2px solid #cc0000; /* Darker red border for selected cards */
+  background-color: #f0e5e5; /* Light red background for selection */
+}
